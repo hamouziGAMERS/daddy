@@ -479,44 +479,6 @@ client.on('message',async message => {
   acRoom.send(`**${mention} تم رفضك لي اخر مره اذا فعلت ثاني اقابلك واعطيك ميوت**`)
   }
 });
-        client.on('message', async message => {
-            let muteReason = message.content.split(" ").slice(3).join(" ");
-            let mutePerson = message.mentions.users.first();//Toxic Codes
-            let messageArray = message.content.split(" ");
-            let muteRole = message.guild.roles.find("name", "Muted");
-            let time = messageArray[2];
-            if(message.content.startsWith(prefix + "اسكت")) {
-              if(!message.channel.guild) return message.reply("هذا الامر للسيرفرات فقط :no_entry: ");
-                if(!message.member.hasPermission('ADMINISTATOR')) return message.channel.send('**لا تملك برمشن** `ADMINISTATOR`' );
-                if(!mutePerson) return message.channel.send('**Mention Someone**')//Toxic Codes
-                if(mutePerson === message.author) return message.channel.send('** :no_entry: لا تستطيع اعطاء نفسك ميوت**');
-                if(mutePerson === client.user) return message.channel.send('** :no_entry: لا تستطيع اعطاء البوت ميوت**');
-                if(message.guild.member(mutePerson).roles.has(muteRole.id)) return message.channel.send('**هذا الشخص لديه ميوت من قبل !**');
-                if(!muteRole) return message.guild.createRole({ name: "Muted", permissions: [] });
-                if(!time) return message.channel.send("**اكتب الوقت**");
-                if(!time.match(/[1-60][s,m,h,d,w]/g)) return message.channel.send('**البوت لا يدعم الوقت هذا**');
-                if(!muteReason) return message.channel.send('** اكتب السبب **')
-                message.guild.member(mutePerson).addRole(muteRole);
-                message.channel.send(`**:white_check_mark: ${mutePerson} has been muted ! :zipper_mouth: **`)
-                message.delete()
-                let muteEmbed = new Discord.RichEmbed()
-                .setTitle(`ميوت جديد`)
-                .setThumbnail(message.guild.iconURL)
-                .addField('تم بواسطة :',message.author,true)
-                .addField('تم اعطاء :', `${mutePerson}`)
-                .addField('السبب :',muteReason,true)
-                .addField('الوقت :',`${mmss(mmss(time), {long: true})}`)
-                .setFooter(message.author.username,message.author.avatarURL);
-                let logchannel = message.guild.channels.find(`name`, "log");
-                if(!logchannel) return message.channel.send("** انا لا اجد اللوق **");
-                logchannel.sendEmbed(muteEmbed)
-                mutePerson.send(`**لقد تم اعطاءك ميوت داخل ${message.guild.name} السبب : ${muteReason}**`)
-                .then(() => { setTimeout(() => {
-                   message.guild.member(mutePerson).removeRole(muteRole);
-               }, mmss(time));
-            });
-            }
-        });
 
 client.on('message', ra3d => {
 var prefix = "!";
