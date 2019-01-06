@@ -1313,7 +1313,7 @@ var heroo = new Discord.RichEmbed()
 .setFooter("Sliver team  |");
   message.channel.send({embed:v1}).then(m => {
       setTimeout(() => {
-         m.edit({embed:yes daddy});
+         m.edit({embed:heroo});
       },3000);
   });
 }
