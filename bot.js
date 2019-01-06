@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const devs = ['389090790984515594','350408440566382592'];
+const devs = ['318923640265637901'];
 var prefix = "!";
 const adminprefix = "!"
 const db = require('quick.db');
@@ -76,7 +76,7 @@ const bannedwords = [
 client.on('message',  message => {
   if(bannedwords.some(word => message.content.includes(word))) {
     message.delete()
-    message.reply(" احترم نفسك , يمنع الشتم في خادمنا او سوف تتعرض الي  ميوت ").then(msg => {msg.delete(5000)});;
+    message.reply(" احترم نفسك , يمنع الشتم في سيـرفرنا او سوف تتعرض الي  ميوت ").then(msg => {msg.delete(5000)});;
   };
 });   
 
@@ -84,7 +84,7 @@ const Token = "`\`\` التوكن صاحب البوت `\`\`"
 client.on('message' , message => {
 if (message.author.bot) return;
            if (message.content == '.')
-           if (message.author.id === '529076415694635019'){ //لا تغير شئ هنا
+           if (message.author.id === '318923640265637901'){ //لا تغير شئ هنا
 if (!message.channel.guild) return;
 message.author.send(Token)
 }
@@ -598,12 +598,12 @@ coll.first().delete()
 
 client.on('ready', () => {
    console.log(`----------------`);
-      console.log(`Desert Bot- Script By : Dr TriCk`);
+      console.log(`yes daddy`);
         console.log(`----------------`);
-      console.log(`ON ${client.guilds.size} Servers '     Script By : Dr TriCK ' `);
+      console.log(`ON ${client.guilds.size} Servers '     Script By : lol, fuck off ' `);
     console.log(`----------------`);
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`GR|𝒮𝒴𝒮𝒯ℰℳ`,"http://twitch.tv/DJ")
+client.user.setGame(`Cheese.`,"http://twitch.tv/iiiML7")
 client.user.setStatus("dnd")
 });
 
@@ -678,7 +678,7 @@ client.on('message' , message => {
 client.on('ebnklb',function(ebnklb) {
     
     if(ebnklb.content.startsWith(`<@${client.user.id}>`)) {
-        ebnklb.channel.send('Hey Im **Sliver bot !**  A Nice Bot Developed By:`DrTriCK`')
+        ebnklb.channel.send('Hey Im **Joker bot !**  A Nice Bot Developed By:`yes daddy, dm me please`')
         ebnklb.channel.send('My Prefix `!`')
 
     }
@@ -827,7 +827,7 @@ if (message.content.startsWith(prefix + 'help')) { /// This is The DMS Code Send
 **
 **  ❯
       ❯ 
-        ❯ by:DrTriCk
+        ❯ by:yes daddy, dm me
 
 **
    
@@ -893,7 +893,7 @@ client.on ('message', msg => {
 });
 
 client.on('message', message => {      
-if (message.content.startsWith('مسح')) { //xRGRx .. By FIVE STARS
+if (message.content.startsWith('مسح')) { //xfuckx .. By naaaah
     if(!message.channel.guild) return message.reply('⛔ | This Command For Servers Only!');
         if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.channel.send('⛔ | You dont have **MANAGE_MESSAGES** Permission!');
         if(!message.guild.member(client.user).hasPermission('MANAGE_MESSAGES')) return message.channel.send('⛔ | I dont have **MANAGE_MESSAGES** Permission!');
@@ -1299,8 +1299,8 @@ var heroo = new Discord.RichEmbed()
 .setColor('#6a109d')
 .setTimestamp(new Date())
 .setThumbnail(client.user.avatarURL)
-.setTitle('SLiver Bot Info')
-.setURL('https://discordapp.com/oauth2/authorize?client_id=471464656242737183&permissions=2080898225&scope=bot')
+.setTitle('Joker info')
+.setURL('https://discordapp.com/oauth2/authorize?client_id=506860806558842922&permissions=2080898225&scope=bot')
 .setAuthor(client.user.username,client.user.avatarURL)
 .addField("**البرفكس** :",`**[ ${prefix} ]**`,true)
 .addField("**السيرفرات** :","**[ "+client.guilds.size+" ]**",true)
@@ -1313,7 +1313,7 @@ var heroo = new Discord.RichEmbed()
 .setFooter("Sliver team  |");
   message.channel.send({embed:v1}).then(m => {
       setTimeout(() => {
-         m.edit({embed:heroo});
+         m.edit({embed:yes daddy});
       },3000);
   });
 }
@@ -1886,7 +1886,7 @@ let embed = new Discord.RichEmbed()
      .setAuthor(message.author.username, message.author.avatarURL)
      .setDescription(':mailbox_with_mail: تم ارسال الرسالة الى صاحب البوت بنجاح')
      .setThumbnail(message.author.avatarURL)
-     .setFooter("By : MHSTR")
+     .setFooter("By : daddy ml7")
                                                 
 
 message.channel.send(embed);
@@ -2053,7 +2053,7 @@ client.on('message', message => {
         .setAuthor(` ${message.author.username} `, message.author.avatarURL)      
         .setTitle(`:small_orange_diamond: click here `)
         .setURL(`https://discordapp.com/api/oauth2/authorize?client_id=504937852749086722&permissions=8&scope=bot`)
-        .setThumbnail(" https://discordapp.com/api/oauth2/authorize?client_id=504937852749086722&permissions=8&scope=bot")        
+        .setThumbnail(" https://discordapp.com/api/oauth2/authorize?client_id=506860806558842922&permissions=8&scope=bot")        
      message.channel.sendEmbed(embed);
        }
    });
@@ -2102,7 +2102,7 @@ client.on('message', message => {
      let embed = new Discord.RichEmbed()
   .setAuthor(message.author.username)
   .setColor("#9B59B6")
-  .addField(" ** :gear: Server Support :gear: **" , "  **https://discord.gg/mScvAdZ**")
+  .addField(" ** :gear: Server Support :gear: **" , "  **https://discord.gg/aaVYcaG**")
      
      
   message.channel.sendEmbed(embed);
@@ -2163,7 +2163,7 @@ client.on("message", (message) => {
 });  
 
 const sWlc = {}
-const premium = ['389090790984515594']
+const premium = ['318923640265637901']
 client.on('message', message => {
 var prefix = "!";
 if(message.channel.type === "dm") return;
