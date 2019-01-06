@@ -202,14 +202,6 @@ client.on('message', message => {
     }
 });
 
-client.on('guildMemberAdd', member=> {
-    member.addRole(member.guild.roles.find("name","DJ"));
-    });
-
-
-client.on('guildMemberAdd', member=> {
-    member.addRole(member.guild.roles.find("name","GR"));
-    });
 
 client.on('message', msg => {
 if(msg.content === ' سلام عليكم  ') {
@@ -261,7 +253,7 @@ client.on('message', message => {
 client.on("ready", () => {
     var guild;
     while (!guild)
-        guild = client.guilds.get("529465701430329346");
+        guild = client.guilds.get("357222077893181460");
     guild.fetchInvites().then((data) => {
         data.forEach((Invite, key, map) => {
             var Inv = Invite.code;
@@ -500,15 +492,7 @@ if(ra3d.content.startsWith(prefix + 'ccolors')) {
 
 
 
-client.on("guildMemberAdd", member => {
-  member.createDM().then(function (channel) {
-  return channel.send(` 
-${member}  
-**مرحبا بك بالسيرفر | Welcome To Server 
-**
-`) 
-}).catch(console.error)
-})
+
 
 client.on('message' , message => {
 if(message.content === '!voice') {
