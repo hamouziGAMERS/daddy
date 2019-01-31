@@ -32,6 +32,26 @@ const sql = require("sqlite");
 ,spee={};
 
 
+//const bannedwords = [
+ //   "https://cdn.discordapp.com/attachments/497850379531321369/530671207410827275/31262081630a8cb3af90c54d01062951.jpg",
+   // "3ars",
+    //"a7a",
+//    "كسمك",
+//    "كلب",
+ //   "يا شرموط",
+ //   "احا",
+ //   "متناك",
+  //  "kosmk",
+
+
+//  ];
+
+//client.on('message',  message => {
+//  if(bannedwords.some(word => message.content.includes(word))) {
+  //  message.delete()
+//    message.reply(" احترم نفسك , يمنع الشتم في سيـرفرنا او سوف تتعرض الي  ميوت ").then(msg => {msg.delete(5000)});;
+ // };
+//});  DrTriCk   
 
 
   client.on('message' , async message => {
